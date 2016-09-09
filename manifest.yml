@@ -1,0 +1,10 @@
+applications:
+- path: .
+  memory: 128M
+  instances: 1
+  domain: eu-gb.mybluemix.net
+  name: nahovno
+  host: nahovno
+  disk_quota: 1024M
+  services:
+  - Nahovno-DB
