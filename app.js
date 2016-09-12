@@ -29,10 +29,8 @@ var extApi = require('./routes/api.js');
 app.use('/api', extApi);
 
 var YuiComboHandler = require('./lib/yuicombo.js').YuiComboHandler;
-app.get('/yui-combo', YuiComboHandler('./public/js/yui') );
-
-// api
-// TBD API route
+//app.get('/yui-combo', YuiComboHandler('./public/js/yui/') );
+app.get('/yui-combo', YuiComboHandler('./public/js/aui/') );
 
 // error handlers
 app.use(clientErrorHandler);
