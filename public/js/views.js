@@ -28,6 +28,25 @@ YUI.add('nahovno-views', function (Y) {
             return this;
         },
         loadPageElements: function (container) {
+
+
+            var data = [
+                { "timestamp": 'aaaaaaa', "rating": 1},
+                { "timestamp": 'aaaaaaa', "rating": 1},
+                { "timestamp": 'aaaaaaa', "rating": 1},
+                { "timestamp": 'aaaaaaa', "rating": 1}
+            ];
+            
+            var columns = ['timestamp', 'rating'];
+
+            new Y.DataTable(
+                    {
+                        columns: columns,
+                        data: data
+                    }
+            ).render(container.one('#listTable'));
+            
+
             new Y.Pagination(
                     {
                         boundingBox: container.one('#jssmall')
@@ -43,7 +62,7 @@ YUI.add('nahovno-views', function (Y) {
         {
             requires: [
                 'view', 'node-load', 'datatable-base', 'model-list', 'io', 'escape', 'node-event-delegate',
-                'aui-pagination'
+                'aui-pagination', 'aui-datatable',
             ]
         }
 );
